@@ -14,10 +14,7 @@ function App() {
 
     const fetchData = async () => {
       const apikey = process.env.REACT_APP_API_KEY;
-      console.log("aus fetch: ", apikey);
-      console.log(
-        `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${apikey}`
-      );
+      
       const res = await fetch(
         `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${apikey}`
       )
